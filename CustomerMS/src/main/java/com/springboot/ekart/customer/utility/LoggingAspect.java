@@ -3,9 +3,13 @@ package com.springboot.ekart.customer.utility;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
 
 import com.springboot.ekart.customer.utility.LoggingAspect;
 
+@Component
+@Aspect
 public class LoggingAspect {
 	
 	private static Log logger = LogFactory.getLog(LoggingAspect.class);

@@ -1,0 +1,24 @@
+server:
+  port: 3334
+  servlet:
+    context-path: /Ekart
+    
+spring:
+  application:
+    name: ProductMS
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: localhost
+      config:
+        fail-fast: false
+        enabled: true
+        prefixes: config
+        defaultContext: application
+        data-key: data
+        profile-separator: '::'
+        format: YAML
+  jpa:
+    hibernate:
+      ddl-auto: update
